@@ -1,5 +1,6 @@
 function fibonacci(num) {
 // your code here
+
 	if (num === 0) {
     return 0;
   } else if (num === 1 || num === 2) {
@@ -7,13 +8,26 @@ function fibonacci(num) {
   } else {
     let a = 0;
     let b = 1;
-    let c;
+	for (let index = 1; index <= n-2; index++) {
+		let temp = b;
+		b = a + b; 
+		a = temp;
+	}
+	return b;
+	// if (num === 0) {
+ //    return 0;
+ //  } else if (num === 1 || num === 2) {
+ //    return 1;
+ //  } else {
+ //    let a = 0;
+ //    let b = 1;
+ //    let c;
 
-    for (let i = 2; i <= num; i++) {
-      c = a + b;
-      a = b;
-      b = c;
-    }
+ //    for (let i = 2; i <= num; i++) {
+ //      c = a + b;
+ //      a = b;
+ //      b = c;
+ //    }
 
     return b;
 	// let prev = 0;
