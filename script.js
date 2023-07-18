@@ -7,7 +7,7 @@ function fibonacci(num) {
   } else {
     let a = 0;
     let b = 1;
-	for (let index = 1; index <= n-2; index++) {
+	for (let index = 1; index <= num; index++) {
 		let temp = b;
 		b = a + b; 
 		a = temp;
